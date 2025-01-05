@@ -6,7 +6,7 @@ from todo import models
 from todo.models import TODOO
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages 
-
+from django.db import connection
 
 
 @login_required(login_url='/loginn')
@@ -74,9 +74,6 @@ def edit_todo(request, srno):
 
     obj = models.TODOO.objects.get(srno=srno)
     return render(request, 'edit_todo.html', {'obj': obj})
-
-
-
 
 
 def signout(request):
