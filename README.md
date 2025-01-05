@@ -1,1 +1,3 @@
-# To-do-backend
+# To-do App
+
+The To-Do app is built using the Django web framework with Python and SQLite database for storing user and task data. The main focus of this web app is on the backend program, which seamlessly integrates user authentication and data storage using Django’s built-in auth package and SQLite database. Django utilizes ORM (Object Relational Mapper), allowing developers to interact with the database in a way similar to SQL without the need to write raw SQL queries. 
