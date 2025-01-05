@@ -5,6 +5,7 @@ from django.contrib.auth import authenticate, login, logout
 from todo import models
 from todo.models import TODOO
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages 
 
 
 
@@ -26,12 +27,6 @@ def signup(request):
     return render(request, 'signup.html')
         
      
-        
-        
-        
-        
-    
-
 def loginn(request):
     if request.method == 'POST':
         fnm=request.POST.get('fnm')
@@ -42,7 +37,7 @@ def loginn(request):
             login(request,userr)
             return redirect('/todopage')
         else:
-            return redirect('/loginn')
+            messages.error(request, "Incorrect username or password")
                
     return render(request, 'loginn.html')
         

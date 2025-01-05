@@ -17,7 +17,13 @@
       <br>
       <br>
     </div>
+    {% if messages %}
+      {% for message in messages %}
+          <p style="color: red;">{{ message }}</p>
+      {% endfor %}
+    {% endif %}
     <div class="signup-box1">
+      
 
       <form method="post">
         {% csrf_token %}
